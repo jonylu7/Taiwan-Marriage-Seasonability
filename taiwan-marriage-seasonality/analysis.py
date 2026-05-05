@@ -5,11 +5,13 @@ Data: MOI Table 1.2 - Monthly marriage registrations, 2000-2025
 
 import re
 import statistics
+from pathlib import Path
 import xlrd
 from python_calamine import CalamineWorkbook
 
-DATA_OLD = "data/m1-02_2000-2016.xls"
-DATA_NEW = "data/m1-02_2017-2026.xlsx"
+ROOT     = Path(__file__).parent
+DATA_OLD = ROOT / "data/m1-02_2000-2016.xls"
+DATA_NEW = ROOT / "data/m1-02_2017-2026.xlsx"
 
 MONTH_ZH = {'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,
             '七':7,'八':8,'九':9,'十':10}
